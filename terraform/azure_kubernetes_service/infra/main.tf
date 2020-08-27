@@ -44,8 +44,8 @@ terraform {
   required_version = "~> 0.13"
 }
 
-data "azuread_group" "aihub_owners" {
-  name = "aihub-platform-owners-dev"
+data "azuread_users" "aks_owners_user_principal_names" {
+  user_principal_names = var.aks_owners_user_principal_names
 }
 
 resource "random_integer" "random_suffix" {
@@ -55,8 +55,8 @@ resource "random_integer" "random_suffix" {
 
 locals {
   RANDOM_SUFFIX             = random_integer.random_suffix.result
-  AKS_ADMINS_MEMBER_ID_LIST = [data.azuread_group.aihub_owners.id]
-  DEVELOPER_IP_FULL         = "40.127.128.225/32"
+  AKS_ADMINS_MEMBER_ID_LIST = data.azuread_users.aks_owners_user_principal_names.object_ids
+  DEVELOPER_IP_FULL         = var.developer_ip_full
 }
 
 provider "azuread" {}
@@ -67,16 +67,10 @@ provider "azurerm" {
 
 data "azurerm_subscription" "current" {}
 
-
 # Create Resource Group
 resource "azurerm_resource_group" "rg" {
   name     = join("", ["example-aks-rg", local.RANDOM_SUFFIX])
   location = "westeurope"
-
-  tags = {
-    "Henkilötietosisältö" : "Ei",
-    "Vastuuhenkilö(t)" : "elias.vakkuri@cgi.com"
-  }
 }
 
 # Create VNET and subnet

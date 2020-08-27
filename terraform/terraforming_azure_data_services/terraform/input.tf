@@ -1,7 +1,7 @@
 variable "environment" {
   type        = string
   description = "Environment identifier"
-  default     = "cgimeetup"
+  default     = "eliasmeetup"
 }
 
 variable "location" {

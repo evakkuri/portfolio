@@ -82,7 +82,7 @@ terraform {
 }
 
 locals {
-  LETSENCRYPT_EMAIL              = "elias.vakkuri@cgi.com"
+  LETSENCRYPT_EMAIL              = var.letsencrypt_email
   LETSENCRYPT_STAGING_ANNOTATION = "letsencrypt-staging"
   LETSENCRYPT_PROD_ANNOTATION    = "letsencrypt-prod"
   AKS_MONGODB_USERNAME           = "eliasvakkuri"

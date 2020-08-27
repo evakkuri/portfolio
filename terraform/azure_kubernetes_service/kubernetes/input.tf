@@ -10,3 +10,11 @@ variable "acr_login_server" {
     images.
     EOF
 }
+
+variable "letsencrypt_email" {
+    type = string
+    description = <<-EOT
+    Email address to provide to Let's Encrypt for e.g. certificate expiry
+    notifications.
+    EOT
+}

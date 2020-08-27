@@ -22,7 +22,7 @@ resource "azurerm_resource_group" "rg" {
 
   tags = {
     Environment = var.environment
-    Author      = "Elias Vakkuri / CGI"
+    Author      = "Elias Vakkuri"
   }
 }
 

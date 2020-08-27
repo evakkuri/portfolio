@@ -3,7 +3,7 @@ _Updated: 2020-02-28_
 
 **Contents**: Updated materials from demo given in Finland Microsoft BI & Power BI User Group session 2020-02-05. See the accompanying PDF of the presentation for more background information.
 
-**Author**: Elias Vakkuri ([LinkedIn](www.linkedin.com/in/elias-vakkuri))
+**Author**: Elias Vakkuri (www.linkedin.com/in/elias-vakkuri)
 
 ## Prerequisites
 * Access to an Azure Subscription
@@ -35,7 +35,9 @@ In order for Databricks to connect to the Key Vault, you need to add the Key Vau
 
 To add the secret scope, navigate to your deployed Azure Databricks Workspace, then alter the URL as follows:
 
+```
 https://westeurope.azuredatabricks.net/?o=<Your workspace id>#secrets/createScope
+```
 
 See the full documentation here: https://docs.microsoft.com/en-us/azure/databricks/security/secrets/secret-scopes#--create-an-azure-key-vault-backed-secret-scope
 

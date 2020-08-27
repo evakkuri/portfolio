@@ -1,9 +1,9 @@
 # Terraforming Azure Data Services
 _Updated: 2020-02-28_
 
-**Contents**: Updated materials from demo given in Finland Microsoft BI & Power BI User Group session 2020-02-05.
+**Contents**: Updated materials from demo given in Finland Microsoft BI & Power BI User Group session 2020-02-05. See the accompanying PDF of the presentation for more background information.
 
-**Author**: Elias Vakkuri, CGI Advanced Analytics Solutions ([LinkedIn](www.linkedin.com/in/elias-vakkuri))
+**Author**: Elias Vakkuri ([LinkedIn](www.linkedin.com/in/elias-vakkuri))
 
 ## Prerequisites
 * Access to an Azure Subscription
@@ -41,6 +41,4 @@ See the full documentation here: https://docs.microsoft.com/en-us/azure/databric
 
 **Uploading the test notebook to Databricks**
 
-After running the Terraform deployment you have infrastructure ready to start receiving and analysing data.
-
-See the accompanying PDF of the presentation for more background information.
+After running the Terraform deployment you have infrastructure ready to start receiving and analysing data. You can use the accompanying Databricks Notebook file "AdlsConnections.dbc" to test that the connections between the components work.

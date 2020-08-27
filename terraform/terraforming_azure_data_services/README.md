@@ -33,9 +33,9 @@ If you need help getting started, see the accompanying PDF, section "Terraform â
 
 In order for Databricks to connect to the Key Vault, you need to add the Key Vault as a secret scope. As of writing, this requires some manual work.
 
-To add the secret scope, navigate to your deployed Azure Databricks Workspace, then after the 
+To add the secret scope, navigate to your deployed Azure Databricks Workspace, then alter the URL as follows:
 
-https://westeurope.azuredatabricks.net/?o=\<Your workspace id\>#secrets/createScope
+https://westeurope.azuredatabricks.net/?o=<Your workspace id>#secrets/createScope
 
 See the full documentation here: https://docs.microsoft.com/en-us/azure/databricks/security/secrets/secret-scopes#--create-an-azure-key-vault-backed-secret-scope
 

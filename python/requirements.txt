@@ -1,0 +1,10 @@
+autopep8
+flake8
+ipython
+jupyter
+numpy
+matplotlib
+pandas
+scikit-learn
+torch
+torchvision

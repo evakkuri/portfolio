@@ -1,0 +1,22 @@
+# Python transient files
+__pycache__
+.ipynb_checkpoints
+
+# Model files & data folders
+*.pth
+data/
+
+# Terraform
+.terraform
+*.tfstate
+*.tfstate.backup
+tfplan
+.terraform.tfstate.lock.info
+terraform.tfstate.d
+*.tfvars
+*.plan
+
+# Comms materials
+*.pptx
+*.drawio
+~*
